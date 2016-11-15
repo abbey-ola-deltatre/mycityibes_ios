@@ -221,10 +221,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fbBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Ht-0EU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fbBG" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Ht-0EU">
                                 <rect key="frame" x="0.0" y="20" width="320" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="211" id="n3I-Aa-m7y"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="starBoy" translatesAutoresizingMaskIntoConstraints="NO" id="ut2-EO-94x">
+                                <rect key="frame" x="27" y="258" width="253" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="mYY-Tn-lh3"/>
+                                    <constraint firstAttribute="width" constant="253" id="veb-y1-Bf4"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -232,7 +239,9 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ALb-Ht-0EU" secondAttribute="trailing" id="5CW-Vv-xE3"/>
                             <constraint firstItem="ALb-Ht-0EU" firstAttribute="leading" secondItem="cgw-TE-Vuq" secondAttribute="leading" id="aUI-sM-wGd"/>
+                            <constraint firstItem="ut2-EO-94x" firstAttribute="top" secondItem="ALb-Ht-0EU" secondAttribute="bottom" constant="27" id="dcd-vl-MWN"/>
                             <constraint firstItem="ALb-Ht-0EU" firstAttribute="top" secondItem="bEm-Ks-A07" secondAttribute="bottom" id="tQP-d7-49T"/>
+                            <constraint firstItem="ut2-EO-94x" firstAttribute="centerX" secondItem="ALb-Ht-0EU" secondAttribute="centerX" id="uyB-fN-nTu"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -253,14 +262,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fbBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="rAG-UJ-rgx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fbBG" translatesAutoresizingMaskIntoConstraints="NO" id="rAG-UJ-rgx">
                                 <rect key="frame" x="0.0" y="20" width="320" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="211" id="mIY-MT-xcg"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6e8-Wr-rZR">
-                                <rect key="frame" x="0.0" y="271" width="304" height="205"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6e8-Wr-rZR">
+                                <rect key="frame" x="0.0" y="271" width="304" height="218"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Voice of the Street: where stars are made, is powered by Studio 31. We bring you raw talents from the street. You are free to listen and share all music files on this app.
 
@@ -268,12 +277,12 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bridge.png" translatesAutoresizingMaskIntoConstraints="NO" id="zD9-MY-NtA">
-                                <rect key="frame" x="16" y="455" width="134" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bridge" translatesAutoresizingMaskIntoConstraints="NO" id="zD9-MY-NtA">
+                                <rect key="frame" x="16" y="489" width="90" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="134" id="2gU-br-CDP"/>
+                                    <constraint firstAttribute="width" constant="90" id="2gU-br-CDP"/>
                                     <constraint firstAttribute="height" constant="44" id="aIV-gs-zRl"/>
-                                    <constraint firstAttribute="height" constant="44" id="m9N-On-FhB"/>
+                                    <constraint firstAttribute="height" constant="31" id="m9N-On-FhB"/>
                                     <constraint firstAttribute="width" constant="134" id="zsa-gU-mJK"/>
                                 </constraints>
                                 <variation key="default">
@@ -283,22 +292,22 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="info@31stbridge.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-5Y-Mna">
-                                <rect key="frame" x="19" y="552" width="129" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="31st bridge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKh-g0-9BI">
+                                <rect key="frame" x="8" y="532" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="31st bridge Nigeria Limited" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKh-g0-9BI">
-                                <rect key="frame" x="8" y="532" width="171" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="info@31stbridge.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-5Y-Mna">
+                                <rect key="frame" x="19" y="552" width="87" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CKh-g0-9BI" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" constant="8" id="17V-Rs-cxw"/>
+                            <constraint firstItem="CKh-g0-9BI" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" constant="20" id="17V-Rs-cxw"/>
                             <constraint firstItem="6e8-Wr-rZR" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leadingMargin" id="8bF-xo-sz8"/>
                             <constraint firstItem="rAG-UJ-rgx" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" id="BdY-F3-y1u"/>
                             <constraint firstItem="zD9-MY-NtA" firstAttribute="top" secondItem="6e8-Wr-rZR" secondAttribute="bottom" constant="8" id="CAR-xf-vGh"/>
@@ -312,7 +321,7 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                             <constraint firstAttribute="trailing" secondItem="rAG-UJ-rgx" secondAttribute="trailing" id="VKZ-8i-PBW"/>
                             <constraint firstItem="6e8-Wr-rZR" firstAttribute="trailing" secondItem="neL-63-pMT" secondAttribute="trailingMargin" id="e2p-fH-H7H"/>
                             <constraint firstItem="zf9-Fb-NOA" firstAttribute="top" secondItem="J0C-5Y-Mna" secondAttribute="bottom" constant="8" id="ehp-WN-cZm"/>
-                            <constraint firstItem="J0C-5Y-Mna" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" constant="20" id="jHF-lx-tPk"/>
+                            <constraint firstItem="J0C-5Y-Mna" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" constant="16" id="jHF-lx-tPk"/>
                             <constraint firstItem="J0C-5Y-Mna" firstAttribute="top" secondItem="CKh-g0-9BI" secondAttribute="bottom" constant="2" id="jdK-Ux-B6d"/>
                             <constraint firstItem="zD9-MY-NtA" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" constant="16" id="uhd-w2-UAS"/>
                             <constraint firstItem="rAG-UJ-rgx" firstAttribute="top" secondItem="i4B-fF-dEf" secondAttribute="bottom" id="xuH-as-gRv"/>
@@ -335,8 +344,9 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
         </scene>
     </scenes>
     <resources>
-        <image name="bridge.png" width="262" height="100"/>
-        <image name="fbBG.png" width="1406" height="1125"/>
+        <image name="bridge" width="262" height="100"/>
+        <image name="fbBG" width="703" height="562"/>
+        <image name="starBoy" width="600" height="600"/>
         <image name="starBoy2.jpg" width="1300" height="866"/>
     </resources>
     <color key="tintColor" red="0.23509844799999999" green="0.3054442081" blue="0.1739186559" alpha="1" colorSpace="calibratedRGB"/>

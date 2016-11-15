@@ -18,15 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starBoy" translatesAutoresizingMaskIntoConstraints="NO" id="SfR-KF-FYJ">
-                                <rect key="frame" x="0.0" y="20" width="600" height="560"/>
+                                <rect key="frame" x="150" y="160" width="300" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="W0d-nA-Oki"/>
+                                    <constraint firstAttribute="width" constant="300" id="cL5-ZR-gaB"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SfR-KF-FYJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Tu9-kw-Kyw"/>
-                            <constraint firstAttribute="bottom" secondItem="SfR-KF-FYJ" secondAttribute="bottom" constant="20" id="iB1-3Y-KUg"/>
                             <constraint firstItem="SfR-KF-FYJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rae-8s-wf9"/>
-                            <constraint firstItem="SfR-KF-FYJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" id="xjy-XK-UGM"/>
                         </constraints>
                     </view>
                 </viewController>
