@@ -142,7 +142,7 @@
         <!--Root View Controller-->
         <scene sceneID="93B-B6-7jZ">
             <objects>
-                <viewController storyboardIdentifier="rootController" id="LSu-E9-fFg" customClass="DEMORootViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rootController" id="LSu-E9-fFg" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cjA-wk-F9f"/>
                         <viewControllerLayoutGuide type="bottom" id="wSe-qK-fYS"/>

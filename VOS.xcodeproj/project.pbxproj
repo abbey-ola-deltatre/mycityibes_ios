@@ -14,7 +14,7 @@
 		4258AA931DA9979300FCBED6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4258AA8E1DA9979300FCBED6 /* FBSDKShareKit.framework */; };
 		4258AA971DA9991200FCBED6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258AA961DA9991200FCBED6 /* MenuViewController.m */; };
 		4258AA9A1DAA7C7000FCBED6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258AA991DAA7C7000FCBED6 /* LoginViewController.m */; };
-		4258AAA11DAD9C8500FCBED6 /* DEMORootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258AAA01DAD9C8500FCBED6 /* DEMORootViewController.m */; };
+		4258AAA11DAD9C8500FCBED6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258AAA01DAD9C8500FCBED6 /* RootViewController.m */; };
 		4258AAAC1DAEE4F700FCBED6 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258AAAB1DAEE4F700FCBED6 /* AboutViewController.m */; };
 		5643E1501C0C2AEA005D1A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643E14F1C0C2AEA005D1A1C /* main.m */; };
 		5643E1531C0C2AEA005D1A1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643E1521C0C2AEA005D1A1C /* AppDelegate.m */; };
@@ -70,8 +70,8 @@
 		4258AA961DA9991200FCBED6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		4258AA981DAA7C7000FCBED6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4258AA991DAA7C7000FCBED6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		4258AA9F1DAD9C8500FCBED6 /* DEMORootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMORootViewController.h; sourceTree = "<group>"; };
-		4258AAA01DAD9C8500FCBED6 /* DEMORootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMORootViewController.m; sourceTree = "<group>"; };
+		4258AA9F1DAD9C8500FCBED6 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		4258AAA01DAD9C8500FCBED6 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4258AAAA1DAEE4F700FCBED6 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		4258AAAB1DAEE4F700FCBED6 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		5643E14B1C0C2AEA005D1A1C /* VOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,8 +329,8 @@
 		5643E1B31C0C35F3005D1A1C /* MusicList */ = {
 			isa = PBXGroup;
 			children = (
-				4258AA9F1DAD9C8500FCBED6 /* DEMORootViewController.h */,
-				4258AAA01DAD9C8500FCBED6 /* DEMORootViewController.m */,
+				4258AA9F1DAD9C8500FCBED6 /* RootViewController.h */,
+				4258AAA01DAD9C8500FCBED6 /* RootViewController.m */,
 				5643E1B71C0C3639005D1A1C /* MusicListViewController.h */,
 				5643E1B81C0C3639005D1A1C /* MusicListViewController.m */,
 				56DBB02A1C116A280089EC56 /* music_list.json */,
@@ -594,7 +594,7 @@
 				5643E1981C0C3105005D1A1C /* MusicHandler.m in Sources */,
 				5643E1AD1C0C35CC005D1A1C /* MusicIndicator.m in Sources */,
 				4258AA971DA9991200FCBED6 /* MenuViewController.m in Sources */,
-				4258AAA11DAD9C8500FCBED6 /* DEMORootViewController.m in Sources */,
+				4258AAA11DAD9C8500FCBED6 /* RootViewController.m in Sources */,
 				5643E1EF1C0D3907005D1A1C /* NAKPlaybackIndicatorView.m in Sources */,
 				5643E19D1C0C3182005D1A1C /* GVUserDefaults+Properties.m in Sources */,
 				4258AAAC1DAEE4F700FCBED6 /* AboutViewController.m in Sources */,

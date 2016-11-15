@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 
-@interface DEMORootViewController : RESideMenu <RESideMenuDelegate>
+@interface RootViewController : RESideMenu <RESideMenuDelegate>
 
 @end
