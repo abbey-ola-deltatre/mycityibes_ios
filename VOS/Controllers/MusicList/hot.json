@@ -1,0 +1,148 @@
+{
+  "data": [
+      {
+      "id": 1,
+      "title": "Olosho equals One Way",
+      "artist": "HK",
+      "pic": "http://aufree.qiniudn.com/images/album/img20/89520/4280541424067346.jpg",
+      "music_url" : "http://9jacarwash.com/oneway.mp3",
+      "file_name" : "oneway"
+      },
+      {
+      "id": 2,
+      "title": "AYE",
+      "artist": "Huzzle K",
+      "pic": "http://main-cdn.grabone.co.nz/goimage/440x267/ie3e4.jpg",
+      "music_url" : "http://9jacarwash.com/aye.mp3",
+      "file_name" : "aye",
+      "content": ""
+      },
+      {
+      "id": 3,
+      "title": "Stay Flying",
+      "artist": "EvaBlessing FT Subgrin",
+      "pic": "http://aufree.qiniudn.com/images/album/img75/87975/6615037721361503772.jpg",
+      "music_url" : "http://9jacarwash.com/StayFLY.mp3",
+      "file_name" : "StayFLY",
+      "content": ""
+      },
+      {
+        "id": 4,
+        "title": "Asiri",
+        "artist": "HK",
+        "pic": "http://aufree.qiniudn.com/images/album/img75/87975/6615037721361503772.jpg",
+        "music_url" : "http://9jacarwash.com/Asiri.mp3",
+        "file_name" : "Asiri",
+        "content": ""
+       },
+      {
+        "id": 5,
+        "title": "Panda",
+        "artist": "Subgri FT Designing",
+        "pic": "http://aufree.qiniudn.com/images/album/img20/89520/4280541424067346.jpg",
+        "music_url" : "http://9jacarwash.com/PANDA.mp3",
+        "file_name" : "PANDA",
+        "content": ""
+        },
+           {
+           "id": 6,
+           "title": "EKO",
+           "artist": "Huzzle K",
+           "pic": "http://main-cdn.grabone.co.nz/goimage/440x267/ie3e4.jpg",
+           "music_url" : "http://9jacarwash.com/EKO.mp3",
+           "file_name" : "EKO",
+           "content": ""
+           },
+           {
+           "id": 7,
+           "title": "Jaiye",
+           "artist": "Huzzle K FT Rashy",
+           "pic": "http://aufree.qiniudn.com/images/album/img75/87975/6615037721361503772.jpg",
+           "music_url" : "http://9jacarwash.com/jaiye.mp3",
+           "file_name" : "jaiye",
+           "content": ""
+           },
+           {
+           "id": 8,
+           "title": "Aduw make no nonsense",
+           "artist": "HK",
+           "pic": "http://aufree.qiniudn.com/images/album/img75/87975/6615037721361503772.jpg",
+           "music_url" : "http://9jacarwash.com/aduw.mp3",
+           "file_name" : "aduw",
+           "content": ""
+           },
+           {
+           "id": 9,
+           "title": "My Area",
+           "artist": "HK",
+           "pic": "http://aufree.qiniudn.com/images/album/img20/89520/4280541424067346.jpg",
+           "music_url" : "http://9jacarwash.com/myArea.mp3",
+           "file_name" : "myArea",
+           "content": ""
+           },
+           {
+           "id": 10,
+           "title": "My Way",
+           "artist": "Subgrin FT Rashy",
+           "pic": "http://main-cdn.grabone.co.nz/goimage/440x267/ie3e4.jpg",
+           "music_url" : "http://9jacarwash.com/myWay.mp3",
+           "file_name" : "myWay",
+           "content": ""
+           },
+           {
+           "id": 11,
+           "title": "Freestyle Love",
+           "artist": "HK",
+           "pic": "http://aufree.qiniudn.com/images/album/img75/87975/6615037721361503772.jpg",
+           "music_url" : "http://9jacarwash.com/hkLove.mp3",
+           "file_name" : "hkLove",
+           "content": ""
+           },
+           {
+           "id": 12,
+           "title": "Adura",
+           "artist": "HK",
+           "pic": "http://aufree.qiniudn.com/images/album/img75/87975/6615037721361503772.jpg",
+           "music_url" : "http://9jacarwash.com/adura.mp3",
+           "file_name" : "adura",
+           "content": ""
+           },
+           {
+           "id": 13,
+           "title": "We gat ta Money",
+           "artist": "Rashy FT Huzzle K, Subgrin",
+           "pic": "http://aufree.qiniudn.com/images/album/img20/89520/4280541424067346.jpg",
+           "music_url" : "http://9jacarwash.com/Moni.mp3",
+           "file_name" : "Moni",
+           "content": ""
+           },
+           {
+           "id": 14,
+           "title": "ida",
+           "artist": "Subgrin",
+           "pic": "http://main-cdn.grabone.co.nz/goimage/440x267/ie3e4.jpg",
+           "music_url" : "http://9jacarwash.com/ida.mp3",
+           "file_name" : "ida",
+           "content": ""
+           },
+           {
+           "id": 15,
+           "title": "I am da New King",
+           "artist": "Subgrin",
+           "pic": "http://aufree.qiniudn.com/images/album/img75/87975/6615037721361503772.jpg",
+           "music_url" : "http://9jacarwash.com/newKing.mp3",
+           "file_name" : "newKing",
+           "content": ""
+           },
+           {
+           "id": 16,
+           "title": "Ololufe",
+           "artist": "Subgrin",
+           "pic": "http://aufree.qiniudn.com/images/album/img75/87975/6615037721361503772.jpg",
+           "music_url" : "http://9jacarwash.com/ololufe.mp3",
+           "file_name" : "ololufe",
+           "content": ""
+           },
+           
+    ]
+}
