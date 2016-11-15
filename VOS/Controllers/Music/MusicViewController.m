@@ -817,7 +817,7 @@ FBSDKLikeControl *likebutton;
     shareframe.origin = CGPointMake(ceil(xPosition) - 45, 70);
     fbsharebutton.frame = shareframe;
     
-    if ([ [ UIScreen mainScreen ] bounds ].size.height < 568)
+    if (IS_IPHONE_4_OR_LESS)
     {
         likebutton.center =  CGPointMake(40, 55);
         _musicSlider.center = CGPointMake(20, 120);
@@ -833,14 +833,14 @@ FBSDKLikeControl *likebutton;
         _volumeControl.frame = CGRectMake (ceil(xPosition - 36), 40, 50, 150);
         _musicSlider.frame = sliderFrame;
     }
-    else if ([ [ UIScreen mainScreen ] bounds ].size.height == 568)
+    else if (IS_IPHONE_5)
     {
         CGFloat xPosition = CGRectGetWidth(superView.frame) - CGRectGetWidth(frame);
         CGRect sliderFrame = CGRectMake(0, 70, 50, 180);
         _volumeControl.frame = CGRectMake (ceil(xPosition - 24), 70, 50, 180);
         _musicSlider.frame = sliderFrame;
     }
-    else if ([ [ UIScreen mainScreen ] bounds ].size.height == 667)
+    else if (IS_IPHONE_6)
     {
         CGFloat xPosition = CGRectGetWidth(superView.frame) - CGRectGetWidth(frame);
         CGRect sliderFrame = CGRectMake(0, 90, 50, 230);
