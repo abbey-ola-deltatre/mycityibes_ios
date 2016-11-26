@@ -22,6 +22,7 @@
 @end
 int indexWatcher;
 BOOL showdeletebotton;
+//UIRefreshControl *refreshController;
 @implementation MusicListViewController
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
@@ -46,11 +47,13 @@ BOOL showdeletebotton;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     _searchBar.backgroundColor = [UIColor redColor];
+    
      MusicViewController *musicVC = [MusicViewController sharedInstance];
-    if (!musicVC.musicEntitiesSelection) musicVC.musicEntitiesSelection = [[NSMutableArray alloc] init];
-    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"mySelection"];
-    musicVC.musicEntitiesSelection = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    [self getofflinelist];
+    [self enablepulltorefresh];
     
     [ self.navigationController.navigationBar setBarTintColor :[ UIColor colorWithRed:0.0 green:0.5 blue:0.2 alpha:1]];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -61,11 +64,34 @@ BOOL showdeletebotton;
     [self headerRefreshing];
 }
 
+-(void)getofflinelist
+{
+    if (!_musicEntitiesSelection) _musicEntitiesSelection = [[NSMutableArray alloc] init];
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"mySelection"];
+    if (data)
+    {
+        _musicEntitiesSelection = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        NSLog(@"offline list  %@", _musicEntitiesSelection);
+    }
+}
+
+-(void)enablepulltorefresh
+{
+    // Initialize the refresh control.
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.2 alpha:1];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(pullToRefresh:)
+                  forControlEvents:UIControlEventValueChanged];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     [self createIndicatorView];
+    NSLog(@"alaby");
 }
 
 # pragma mark - Custom right bar button item
@@ -114,9 +140,18 @@ BOOL showdeletebotton;
     MusicViewController *musicVC = [MusicViewController sharedInstance];
     if ([musicVC.musicTitle isEqualToString:@"my selection"])
     {
-        _musicEntities = musicVC.musicEntitiesSelection;
+        _musicEntities = _musicEntitiesSelection;
         showdeletebotton = true;
         [self.tableView reloadData];
+        NSLog(@"%lu", (unsigned long)_musicEntitiesSelection.count);
+        if (_musicEntitiesSelection.count != 0) {
+            self.tableView.backgroundView = nil;
+        }
+        else
+        {
+            [self tableviewbackgroundtext:@"Its boring here, you have not added any track to your selection"];
+        }
+        
     }
     else if ([musicVC.musicTitle isEqualToString:@"as e dey hot"])
     {
@@ -133,6 +168,13 @@ BOOL showdeletebotton;
         showdeletebotton = false;
         [self loadjsondata:@"http://9jacarwash.com/ourpick.json"];
     }
+    [self.tableView reloadData];
+}
+
+-(void)pullToRefresh : (id)sender
+{
+    [self headerRefreshing];
+    [self.refreshControl endRefreshing];
 }
 
 -(void)loadjsondata:(NSString *)jsonurl
@@ -257,6 +299,35 @@ BOOL showdeletebotton;
     }
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (_musicEntities)
+    {
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        return 1;
+    }
+    else
+    {
+        [self tableviewbackgroundtext:@"No data is currently available. Pull down to refresh. If issue persist, please check your internet connection"];
+    }
+    return 0;
+}
+
+-(void)tableviewbackgroundtext: (NSString*)text
+{
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    messageLabel.text = text;
+    messageLabel.textColor = [UIColor blackColor];
+    messageLabel.numberOfLines = 0;
+    messageLabel.textAlignment = NSTextAlignmentCenter;
+    messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+    messageLabel.textColor = [UIColor whiteColor];
+    [messageLabel sizeToFit];
+    self.tableView.backgroundView = messageLabel;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *musicListCell = @"musicListCell";
@@ -273,8 +344,8 @@ BOOL showdeletebotton;
     }
     else
     {
-        MusicViewController *musicVC = [MusicViewController sharedInstance];
-        for (MusicEntity *musicEntityinqueue in musicVC.musicEntitiesSelection)
+        //MusicViewController *musicVC = [MusicViewController sharedInstance];
+        for (MusicEntity *musicEntityinqueue in _musicEntitiesSelection)
         {
             if ([[_musicEntities[indexPath.row] musicUrl] isEqualToString:musicEntityinqueue.musicUrl])
             {
@@ -317,20 +388,26 @@ BOOL showdeletebotton;
     indexWatcher = 0;
 }
 
-- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
+- (void)searchDisplayControllerDidEndSearch:(UISearchController *)controller
 {
     indexWatcher = 0;
 }
 - (IBAction)deletethistrack:(id)sender
 {
-    NSLog(@"%@", [_musicEntities objectAtIndex:[sender tag]]);
-    MusicEntity *trackTodelete = [_musicEntities objectAtIndex:[sender tag]];
-    [self deletefilefromSelection:trackTodelete.fileName :[sender tag]];
-}
 
--(void)deletefilefromSelection:(NSString *)filename :(NSInteger)index
+    MusicEntity *trackTodelete = [_musicEntities objectAtIndex:[sender tag]];
+    [self deletefilefromSelection:trackTodelete.fileName :(int)[sender tag]];}
+
+-(void)deletefilefromSelection:(NSString *)filename :(int)index
 {
+    NSLog(@"%d", index);
+    NSLog(@"%@", _musicEntities);
+    //[_musicEntitiesSelection removeObjectAtIndex:index];
+    [_musicEntitiesSelection removeObjectAtIndex:index];
+    NSLog(@"%@", _musicEntities);
+    //_musicEntities = _musicEntitiesSelection;
     NSFileManager *fileManager = [NSFileManager defaultManager];
+    [self savemusicentitytodisk];
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filewithsufix = [NSString stringWithFormat:@"%@.mp3", filename];
     NSString *filePath = [documentsPath stringByAppendingPathComponent:filewithsufix];
@@ -338,18 +415,20 @@ BOOL showdeletebotton;
     BOOL success = [fileManager removeItemAtPath:filePath error:&error];
     if (success)
     {
-        MusicViewController *musicVC = [MusicViewController sharedInstance];
-        [musicVC.musicEntitiesSelection removeObjectAtIndex:index];
-        NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:musicVC.musicEntitiesSelection];
-        [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:@"mySelection"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [self showMiddleHint:@"track deleted"];
-        [self.tableView reloadData];
+       [self showMiddleHint:@"track deleted"];
     }
     else
     {
         NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
     }
+}
+
+-(void)savemusicentitytodisk
+{
+    NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:_musicEntitiesSelection];
+    [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:@"mySelection"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.tableView reloadData];
 }
 
 @end

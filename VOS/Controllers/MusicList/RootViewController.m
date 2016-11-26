@@ -9,6 +9,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.menuPreferredStatusBarStyle = UIStatusBarStyleLightContent;
     self.contentViewShadowColor = [UIColor blackColor];
     self.contentViewShadowOffset = CGSizeMake(0, 0);

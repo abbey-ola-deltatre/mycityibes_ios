@@ -16,5 +16,6 @@
 
 @interface MusicListViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, strong) NSMutableArray *musicEntitiesSelection;
 @property (nonatomic, weak) id <MusicListViewControllerDelegate> delegate;
 @end
