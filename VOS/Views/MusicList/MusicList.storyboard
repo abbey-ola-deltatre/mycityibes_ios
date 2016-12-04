@@ -249,7 +249,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fbBG" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Ht-0EU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="j2v" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Ht-0EU">
                                 <rect key="frame" x="0.0" y="20" width="375" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="211" id="n3I-Aa-m7y"/>
@@ -289,7 +289,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fbBG" translatesAutoresizingMaskIntoConstraints="NO" id="rAG-UJ-rgx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="j2v" translatesAutoresizingMaskIntoConstraints="NO" id="rAG-UJ-rgx">
                                 <rect key="frame" x="0.0" y="20" width="375" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="211" id="mIY-MT-xcg"/>
@@ -584,7 +584,7 @@ This App was designed and built by 31st bridge Limited. See contact information 
         <image name="alaby" width="90" height="85"/>
         <image name="bridge" width="262" height="100"/>
         <image name="dj_mix" width="800" height="533"/>
-        <image name="fbBG" width="703" height="562"/>
+        <image name="j2v" width="1406" height="1125"/>
         <image name="mavin" width="800" height="600"/>
         <image name="starBoy" width="600" height="600"/>
         <image name="starBoy2" width="1300" height="866"/>
