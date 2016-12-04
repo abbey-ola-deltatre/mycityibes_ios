@@ -375,7 +375,7 @@ This App was designed and built by 31st bridge Limited. See contact information 
             </objects>
             <point key="canvasLocation" x="1143.2" y="991.75412293853083"/>
         </scene>
-        <!--J2Music-->
+        <!--J2Vibes-->
         <scene sceneID="dlh-tE-aKS">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2m1-qW-2Ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -533,7 +533,7 @@ This App was designed and built by 31st bridge Limited. See contact information 
                         <color key="backgroundColor" red="0.1779979122" green="0.2429023683" blue="0.12995291170000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="J2Music" id="Y93-8G-2Ib">
+                    <navigationItem key="navigationItem" title="J2Vibes" id="Y93-8G-2Ib">
                         <barButtonItem key="backBarButtonItem" title="Category" id="1ET-P5-VQW">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>

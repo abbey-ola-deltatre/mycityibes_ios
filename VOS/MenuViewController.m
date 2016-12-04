@@ -47,7 +47,7 @@ UILabel *label;
 {
     _greeting.text = @"";
     label = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 19, 10)];
-    label.text = @"Custom Label";
+    label.text = @"";
     label.frame = _greeting.frame;
     label.font = _greeting.font;
     label.textColor = _greeting.textColor;
