@@ -1,11 +1,3 @@
-//
-//  MusicListViewController.m
-//  Enesco
-//
-//  Created by Aufree on 11/30/15.
-//  Copyright © 2015 The EST Group. All rights reserved.
-//
-
 #import "MusicListViewController.h"
 #import "MusicViewController.h"
 #import "MusicListCell.h"

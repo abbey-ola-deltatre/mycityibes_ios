@@ -16,6 +16,7 @@
 		4258AA9A1DAA7C7000FCBED6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258AA991DAA7C7000FCBED6 /* LoginViewController.m */; };
 		4258AAA11DAD9C8500FCBED6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258AAA01DAD9C8500FCBED6 /* RootViewController.m */; };
 		4258AAAC1DAEE4F700FCBED6 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258AAAB1DAEE4F700FCBED6 /* AboutViewController.m */; };
+		429517391DF36AA600F9D535 /* MusicCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429517381DF36AA600F9D535 /* MusicCategoryViewController.m */; };
 		5643E1501C0C2AEA005D1A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643E14F1C0C2AEA005D1A1C /* main.m */; };
 		5643E1531C0C2AEA005D1A1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643E1521C0C2AEA005D1A1C /* AppDelegate.m */; };
 		5643E15B1C0C2AEA005D1A1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5643E15A1C0C2AEA005D1A1C /* Assets.xcassets */; };
@@ -74,6 +75,8 @@
 		4258AAA01DAD9C8500FCBED6 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4258AAAA1DAEE4F700FCBED6 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		4258AAAB1DAEE4F700FCBED6 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		429517371DF36AA600F9D535 /* MusicCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicCategoryViewController.h; sourceTree = "<group>"; };
+		429517381DF36AA600F9D535 /* MusicCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicCategoryViewController.m; sourceTree = "<group>"; };
 		5643E14B1C0C2AEA005D1A1C /* VOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5643E14F1C0C2AEA005D1A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5643E1511C0C2AEA005D1A1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 				5643E1B71C0C3639005D1A1C /* MusicListViewController.h */,
 				5643E1B81C0C3639005D1A1C /* MusicListViewController.m */,
 				56DBB02A1C116A280089EC56 /* music_list.json */,
+				429517371DF36AA600F9D535 /* MusicCategoryViewController.h */,
+				429517381DF36AA600F9D535 /* MusicCategoryViewController.m */,
 			);
 			path = MusicList;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				5643E1C41C0C3985005D1A1C /* BaseEntity.m in Sources */,
 				5643E1E01C0C3FF5005D1A1C /* MusicListCell.m in Sources */,
 				5643E1A51C0C3482005D1A1C /* NSString+Additions.m in Sources */,
+				429517391DF36AA600F9D535 /* MusicCategoryViewController.m in Sources */,
 				5643E1A11C0C3458005D1A1C /* UIView+Animations.m in Sources */,
 				5643E1B91C0C3639005D1A1C /* MusicListViewController.m in Sources */,
 				5643E1C51C0C3985005D1A1C /* MusicEntity.m in Sources */,
