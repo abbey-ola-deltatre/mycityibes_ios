@@ -180,7 +180,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.42299725490000001" green="0.57723730419999997" blue="0.30882230160000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="   You are not signed in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dq-En-WeQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dq-En-WeQ">
                                 <rect key="frame" x="0.0" y="606" width="299" height="61"/>
                                 <color key="backgroundColor" red="0.010178078470000001" green="0.57723730419999997" blue="0.12563127330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -296,16 +296,18 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6e8-Wr-rZR">
-                                <rect key="frame" x="0.0" y="271" width="304" height="218"/>
+                                <rect key="frame" x="35" y="269" width="304" height="267"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Voice of the Street: where stars are made, is powered by Studio 31. We bring you raw talents from the street. You are free to listen and share all music files on this app.
+                                <string key="text">J2Vibes: where stars are made, is powered by Studio 31st. Enjoy the best of Afrobeat with all kind of flavour. We bring you music from celebs and raw talents from the street. You are free to listen and share all music files on this app.
 
-This App was designed and built by 31st bridge Nigeria Limited. See contact information below.</string>
+Are you looking to promote your music on the platform? Go to www.j2vibes.com to upload your music file. It will be available for all users as soon as we conclude piracy check.
+
+This App was designed and built by 31st bridge Limited. See contact information below.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bridge" translatesAutoresizingMaskIntoConstraints="NO" id="zD9-MY-NtA">
-                                <rect key="frame" x="16" y="489" width="90" height="31"/>
+                                <rect key="frame" x="12" y="595" width="90" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="2gU-br-CDP"/>
                                     <constraint firstAttribute="height" constant="44" id="aIV-gs-zRl"/>
@@ -320,17 +322,20 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="31st bridge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKh-g0-9BI">
-                                <rect key="frame" x="8" y="532" width="98" height="21"/>
+                                <rect key="frame" x="8" y="626" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="info@31stbridge.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-5Y-Mna">
-                                <rect key="frame" x="19" y="552" width="87" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="abbey@31stbridge.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-5Y-Mna">
+                                <rect key="frame" x="102" y="643" width="171" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="alaby" translatesAutoresizingMaskIntoConstraints="NO" id="8Bn-oi-Uwb">
+                                <rect key="frame" x="260" y="600" width="99" height="47"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -343,12 +348,14 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                             <constraint firstItem="6e8-Wr-rZR" firstAttribute="top" secondItem="rAG-UJ-rgx" secondAttribute="bottom" constant="40" id="GnF-GO-TQo"/>
                             <constraint firstItem="6e8-Wr-rZR" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" id="IjC-ip-hGA"/>
                             <constraint firstItem="CKh-g0-9BI" firstAttribute="top" secondItem="zD9-MY-NtA" secondAttribute="bottom" constant="8" id="Iyb-M5-eDQ"/>
+                            <constraint firstItem="8Bn-oi-Uwb" firstAttribute="baseline" secondItem="J0C-5Y-Mna" secondAttribute="baseline" id="KTv-Tc-8Fb"/>
                             <constraint firstItem="CKh-g0-9BI" firstAttribute="top" secondItem="zD9-MY-NtA" secondAttribute="bottom" constant="2" id="Mye-3n-9Pb"/>
                             <constraint firstItem="zf9-Fb-NOA" firstAttribute="top" secondItem="CKh-g0-9BI" secondAttribute="bottom" constant="24" id="Rne-T0-rnX"/>
+                            <constraint firstItem="zf9-Fb-NOA" firstAttribute="top" secondItem="J0C-5Y-Mna" secondAttribute="bottom" constant="8" id="TTb-Ir-fjj"/>
                             <constraint firstAttribute="trailing" secondItem="rAG-UJ-rgx" secondAttribute="trailing" id="VKZ-8i-PBW"/>
+                            <constraint firstItem="8Bn-oi-Uwb" firstAttribute="trailing" secondItem="neL-63-pMT" secondAttribute="trailingMargin" id="ZhF-6z-3f0"/>
                             <constraint firstItem="6e8-Wr-rZR" firstAttribute="trailing" secondItem="neL-63-pMT" secondAttribute="trailingMargin" id="e2p-fH-H7H"/>
-                            <constraint firstItem="zf9-Fb-NOA" firstAttribute="top" secondItem="J0C-5Y-Mna" secondAttribute="bottom" constant="8" id="ehp-WN-cZm"/>
-                            <constraint firstItem="J0C-5Y-Mna" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" constant="16" id="jHF-lx-tPk"/>
+                            <constraint firstItem="J0C-5Y-Mna" firstAttribute="centerX" secondItem="neL-63-pMT" secondAttribute="centerX" id="iuq-FX-r7N"/>
                             <constraint firstItem="J0C-5Y-Mna" firstAttribute="top" secondItem="CKh-g0-9BI" secondAttribute="bottom" constant="2" id="jdK-Ux-B6d"/>
                             <constraint firstItem="zD9-MY-NtA" firstAttribute="leading" secondItem="neL-63-pMT" secondAttribute="leading" constant="16" id="uhd-w2-UAS"/>
                             <constraint firstItem="rAG-UJ-rgx" firstAttribute="top" secondItem="i4B-fF-dEf" secondAttribute="bottom" id="xuH-as-gRv"/>
@@ -366,7 +373,7 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dla-Wu-rY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="992"/>
+            <point key="canvasLocation" x="1143.2" y="991.75412293853083"/>
         </scene>
         <!--J2Music-->
         <scene sceneID="dlh-tE-aKS">
@@ -574,6 +581,7 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
         </scene>
     </scenes>
     <resources>
+        <image name="alaby" width="90" height="85"/>
         <image name="bridge" width="262" height="100"/>
         <image name="dj_mix" width="800" height="533"/>
         <image name="fbBG" width="703" height="562"/>

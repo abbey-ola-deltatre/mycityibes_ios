@@ -30,7 +30,7 @@
     NSLog(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
     MenuViewController* menuVc = [[MenuViewController alloc]init];
     [menuVc getUserFBName];
-    //menuVc = nil;
+    menuVc = nil;
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
