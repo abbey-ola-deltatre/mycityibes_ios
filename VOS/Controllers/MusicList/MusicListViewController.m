@@ -102,9 +102,6 @@ BOOL showdeletebotton;
     {
         indicator.state = NAKPlaybackIndicatorViewStatePlaying;
     }
-    UIImage *leftMenu = [UIImage imageNamed:@"menu"];
-    leftMenu = [leftMenu imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.navigationItem.leftBarButtonItem =  [[UIBarButtonItem alloc] initWithImage:leftMenu style:UIBarButtonItemStylePlain target:self action:@selector(presentLeftMenuViewController:)];
     
     [self.navigationController.navigationBar addSubview:indicator];
     

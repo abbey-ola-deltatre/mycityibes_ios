@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DCT-sg-haN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LSu-E9-fFg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,7 +15,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="musicList" hidesBottomBarWhenPushed="YES" id="sCl-Du-nVD" customClass="MusicListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0uN-76-6ke">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="967"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23509844799999999" green="0.3054442081" blue="0.1739186559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.23509844799999999" green="0.3054442081" blue="0.1739186559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -140,7 +140,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2241" y="355"/>
+            <point key="canvasLocation" x="738" y="-417"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="93B-B6-7jZ">
@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqx-G0-6gV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="354.87256371814095"/>
+            <point key="canvasLocation" x="780" y="355"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="nb4-5Z-ZjF">
@@ -172,9 +172,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="starBoy2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q5E-rM-xyG">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="starBoy2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q5E-rM-xyG">
                                 <rect key="frame" x="40" y="154" width="240" height="128"/>
                             </imageView>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGg-8H-bHg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.42299725490000001" green="0.57723730419999997" blue="0.30882230160000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="   You are not signed in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dq-En-WeQ">
+                                <rect key="frame" x="0.0" y="606" width="299" height="61"/>
+                                <color key="backgroundColor" red="0.010178078470000001" green="0.57723730419999997" blue="0.12563127330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="cNK-Pe-hjn"/>
+                                    <constraint firstAttribute="height" constant="51" id="maf-0m-tiM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mag-Me-w3A">
+                                <rect key="frame" x="0.0" y="-1" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="0.010178078468507082" green="0.57723730419999997" blue="0.12563127333912866" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -182,17 +206,21 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Q5E-rM-xyG" secondAttribute="trailing" id="Igh-Hq-93b"/>
                             <constraint firstItem="Q5E-rM-xyG" firstAttribute="top" secondItem="uwQ-w9-4a2" secondAttribute="bottom" constant="20" id="VKQ-45-gyi"/>
                             <constraint firstItem="Q5E-rM-xyG" firstAttribute="leading" secondItem="YCn-Ko-zUZ" secondAttribute="leadingMargin" id="tMR-JZ-Pnc"/>
+                            <constraint firstItem="goZ-Ao-hVG" firstAttribute="top" secondItem="0Dq-En-WeQ" secondAttribute="bottom" constant="2" id="x0E-sI-aS1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greeting" destination="0Dq-En-WeQ" id="RKY-DR-P0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7I-uS-wAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="978"/>
+            <point key="canvasLocation" x="-338.39999999999998" y="966.56671664167925"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Mw-wz-48v">
             <objects>
-                <navigationController storyboardIdentifier="contentViewController" automaticallyAdjustsScrollViewInsets="NO" id="CtV-Hs-KvD" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CtV-Hs-KvD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4QE-fa-sgF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -207,7 +235,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4x4-GK-T5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597.5999999999999" y="354.87256371814095"/>
+            <point key="canvasLocation" x="1466" y="-979"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="q9s-Sa-9DO">
@@ -344,7 +372,7 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
         <scene sceneID="dlh-tE-aKS">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2m1-qW-2Ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Jbu-Kq-lHc" customClass="MusicCategoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mcategory" id="Jbu-Kq-lHc" customClass="MusicCategoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oR7-2E-hXa"/>
                         <viewControllerLayoutGuide type="bottom" id="lx4-pX-pCJ"/>
@@ -361,10 +389,13 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="945"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igk-sV-0kT">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igk-sV-0kT" userLabel="djmix">
                                                 <rect key="frame" x="192" y="20" width="164" height="140"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                 <state key="normal" image="dj_mix"/>
+                                                <connections>
+                                                    <action selector="djmix:" destination="Jbu-Kq-lHc" eventType="touchUpInside" id="4VX-No-aXa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmS-7S-rdQ">
                                                 <rect key="frame" x="20" y="20" width="164" height="140"/>
@@ -372,11 +403,17 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="#Trending"/>
+                                                <connections>
+                                                    <action selector="trending:" destination="Jbu-Kq-lHc" eventType="touchUpInside" id="Lxe-1w-5ZT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RM-Ho-4tZ" userLabel="ybnl">
                                                 <rect key="frame" x="20" y="220" width="164" height="140"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="ybnl"/>
+                                                <connections>
+                                                    <action selector="ybnl:" destination="Jbu-Kq-lHc" eventType="touchUpInside" id="wOq-lE-78B"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zb6-18-7h2">
                                                 <rect key="frame" x="20" y="431" width="164" height="140"/>
@@ -384,6 +421,9 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <state key="normal" title="#Old School"/>
+                                                <connections>
+                                                    <action selector="oldies:" destination="Jbu-Kq-lHc" eventType="touchUpInside" id="1v5-Jo-cp4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZr-ry-gXC">
                                                 <rect key="frame" x="192" y="649" width="164" height="140"/>
@@ -391,6 +431,9 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                                 <color key="backgroundColor" red="0.55541767664776698" green="0.74475513763197587" blue="0.39397803357742578" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="#Gospel"/>
+                                                <connections>
+                                                    <action selector="gospel:" destination="Jbu-Kq-lHc" eventType="touchUpInside" id="WND-EN-WLa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-Uz-pbG">
                                                 <rect key="frame" x="192" y="220" width="164" height="140"/>
@@ -398,11 +441,17 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                                 <color key="backgroundColor" red="1" green="0.45466064220000002" blue="0.2259745239" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="#Newbies"/>
+                                                <connections>
+                                                    <action selector="newbies:" destination="Jbu-Kq-lHc" eventType="touchUpInside" id="5h0-9n-XTA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDF-Ed-XTo" userLabel="mavin">
                                                 <rect key="frame" x="192" y="431" width="164" height="140"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                 <state key="normal" image="mavin"/>
+                                                <connections>
+                                                    <action selector="maven:" destination="Jbu-Kq-lHc" eventType="touchUpInside" id="1SL-b2-1ec"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h11-kd-LpE">
                                                 <rect key="frame" x="20" y="168" width="96" height="21"/>
@@ -443,6 +492,9 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                                                 <rect key="frame" x="20" y="649" width="164" height="140"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="starBoy2"/>
+                                                <connections>
+                                                    <action selector="myselection:" destination="Jbu-Kq-lHc" eventType="touchUpInside" id="eeL-Rp-2Zt"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmP-75-xsa">
                                                 <rect key="frame" x="20" y="797" width="115" height="21"/>
@@ -475,8 +527,7 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="J2Music" id="Y93-8G-2Ib">
-                        <barButtonItem key="backBarButtonItem" title="Category" id="1ET-P5-VQW"/>
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="SbF-Nx-6Fk">
+                        <barButtonItem key="backBarButtonItem" title="Category" id="1ET-P5-VQW">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
@@ -485,7 +536,7 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                     <connections>
                         <outlet property="contentView" destination="WF1-5l-3Ya" id="Vie-L7-yUc"/>
                         <outlet property="djlabel" destination="6QW-BL-Rnp" id="czO-Ka-UNr"/>
-                        <outlet property="djmixbutton" destination="igk-sV-0kT" id="C4o-Bv-kIK"/>
+                        <outlet property="djmixbutton" destination="igk-sV-0kT" id="t2c-vv-wmj"/>
                         <outlet property="gospel" destination="iZr-ry-gXC" id="biw-11-vYE"/>
                         <outlet property="gospellabel" destination="t3p-h5-hsR" id="tHx-d9-avL"/>
                         <outlet property="mavin" destination="ZDF-Ed-XTo" id="q2a-PM-yRM"/>
@@ -497,15 +548,16 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                         <outlet property="scrolView" destination="M4f-g4-bIp" id="Icf-SH-31s"/>
                         <outlet property="trendingbutton" destination="pmS-7S-rdQ" id="rNk-qS-s1a"/>
                         <outlet property="ybnl" destination="0RM-Ho-4tZ" id="FRr-7a-Obq"/>
+                        <segue destination="sCl-Du-nVD" kind="show" identifier="gototable" id="WYQ-8b-Ryf"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="123.18840579710145" y="-467.93478260869568"/>
+            <point key="canvasLocation" x="-87" y="-361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BtL-Yl-pHv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DCT-sg-haN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="contentViewController" automaticallyAdjustsScrollViewInsets="NO" id="DCT-sg-haN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="T1u-If-Km5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -518,7 +570,7 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1P-CY-DMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-644" y="-258"/>
+            <point key="canvasLocation" x="-786" y="-468"/>
         </scene>
     </scenes>
     <resources>
@@ -526,11 +578,13 @@ This App was designed and built by 31st bridge Nigeria Limited. See contact info
         <image name="dj_mix" width="800" height="533"/>
         <image name="fbBG" width="703" height="562"/>
         <image name="mavin" width="800" height="600"/>
-        <image name="menu" width="25" height="17"/>
         <image name="starBoy" width="600" height="600"/>
         <image name="starBoy2" width="1300" height="866"/>
         <image name="starBoy2.jpg" width="22" height="13"/>
         <image name="ybnl" width="640" height="450"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WYQ-8b-Ryf"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.23509844799999999" green="0.3054442081" blue="0.1739186559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

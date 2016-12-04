@@ -19,8 +19,6 @@
     
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuVC"];
-    self.rightMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuVC"];
-    //self.backgroundImage = [UIImage imageNamed:@"Stars"];
     self.delegate = self;
 }
 
@@ -32,7 +30,7 @@
     NSLog(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
     MenuViewController* menuVc = [[MenuViewController alloc]init];
     [menuVc getUserFBName];
-    menuVc = nil;
+    //menuVc = nil;
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
