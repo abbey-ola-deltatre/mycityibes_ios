@@ -15,5 +15,7 @@
 @property (nonatomic, copy) NSString *cover;
 @property (nonatomic, copy) NSString *artistName;
 @property (nonatomic, copy) NSString *fileName;
+@property (nonatomic, copy) NSString *producer;
+@property (nonatomic, copy) NSString *year;
 @property (nonatomic, assign) BOOL isFavorited;
 @end

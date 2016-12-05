@@ -61,7 +61,7 @@
 - (IBAction)oldies:(id)sender
 {
     MusicViewController *musicVC = [MusicViewController sharedInstance];
-    musicVC.musicTitle = @"old shool";
+    musicVC.musicTitle = @"old school";
     [self performSegueWithIdentifier:@"gototable" sender:self];
 }
 

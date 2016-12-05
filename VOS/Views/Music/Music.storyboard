@@ -293,13 +293,13 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRD-h4-fXP">
                                 <rect key="frame" x="0.0" y="388" width="320" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="nationalty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnN-Ch-jMi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="producer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnN-Ch-jMi">
                                         <rect key="frame" x="8" y="29" width="270" height="21"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bz-rZ-SPU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bz-rZ-SPU">
                                         <rect key="frame" x="8" y="58" width="270" height="21"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -366,6 +366,8 @@
                         <outlet property="musicToggleButton" destination="tuX-y5-JJt" id="Ltg-vi-Ksi"/>
                         <outlet property="nextMusicButton" destination="fFV-g7-xwY" id="Y7x-Qw-H9J"/>
                         <outlet property="previousMusicButton" destination="Zgg-wr-cOh" id="E1q-gv-I3j"/>
+                        <outlet property="producerLabel" destination="tnN-Ch-jMi" id="o46-Z8-IYe"/>
+                        <outlet property="releasedate" destination="5bz-rZ-SPU" id="mF3-Dw-yTW"/>
                         <outlet property="seconddismissButton" destination="1Qm-Oe-F7x" id="Wv9-Nw-BA2"/>
                         <outlet property="singerLabel" destination="Tl0-TT-dkd" id="ct4-NA-Qm1"/>
                         <outlet property="volumeControl" destination="oOv-WL-s3x" id="Q1E-DF-RpS"/>

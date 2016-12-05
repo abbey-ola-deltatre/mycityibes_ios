@@ -20,11 +20,11 @@ NSArray *titles;
 UITableViewCell *cell;
 @implementation MenuViewController
 UILabel *label;
+UILabel *labelout;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.view.backgroundColor = [UIColor grayColor];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     self.tableView = ({
@@ -52,6 +52,17 @@ UILabel *label;
     label.font = _greeting.font;
     label.textColor = _greeting.textColor;
     [self.view addSubview:label];
+    
+    labelout = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 19, 10)];
+    labelout.text = @"  You are not signed in";
+    labelout.frame = _greeting.frame;
+    labelout.font = _greeting.font;
+    labelout.textColor = _greeting.textColor;
+    [self.view addSubview:labelout];
+    
+    labelout.hidden = true;
+    label.hidden = true;
+
 }
 
 #pragma mark -
@@ -132,7 +143,8 @@ UILabel *label;
              {
                  NSString *name = [result objectForKey:@"first_name"];
                  titles = @[@"Home", @"About", @"Log out"];
-                 
+                 labelout.hidden = true;
+                 label.hidden = false;
                  label.text = [NSString stringWithFormat:@"  What's up %@ ?", name];
                  cell.textLabel.text = @"Log out";
              }
@@ -144,7 +156,9 @@ UILabel *label;
     }
     else
     {
-        label.text = @"  You are not signed in";
+        label.text = @"";
+        label.hidden = true;
+        labelout.hidden = false;
         cell.textLabel.text = @"Log In";
     }
 }

@@ -44,8 +44,6 @@
 
 - (void)buttonPressed:(UIButton *)button
 {
-    NSLog(@"Button Pressed");
-    
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
     content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];
 }
