@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LSu-E9-fFg">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -151,7 +151,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wSe-qK-fYS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kl1-mD-tbZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -169,14 +169,14 @@
                         <viewControllerLayoutGuide type="bottom" id="goZ-Ao-hVG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YCn-Ko-zUZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="starBoy2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q5E-rM-xyG">
                                 <rect key="frame" x="40" y="154" width="240" height="128"/>
                             </imageView>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGg-8H-bHg">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.42299725490000001" green="0.57723730419999997" blue="0.30882230160000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -192,7 +192,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mag-Me-w3A">
-                                <rect key="frame" x="0.0" y="-1" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="-1" width="768" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" red="0.010178078468507082" green="0.57723730419999997" blue="0.12563127333912866" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -246,36 +246,52 @@
                         <viewControllerLayoutGuide type="bottom" id="1fP-Mf-MMn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cgw-TE-Vuq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="j2v" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Ht-0EU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="211"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mcv" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Ht-0EU">
+                                <rect key="frame" x="0.0" y="20" width="768" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="211" id="n3I-Aa-m7y"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="starBoy" translatesAutoresizingMaskIntoConstraints="NO" id="ut2-EO-94x">
-                                <rect key="frame" x="27" y="258" width="253" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="mYY-Tn-lh3"/>
-                                    <constraint firstAttribute="width" constant="253" id="veb-y1-Bf4"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Show us some love, like us on facebook." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkz-zd-iFG">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login with facebook to customize" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gA2-xc-ehP">
+                                <rect key="frame" x="16" y="352" width="736" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="your page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-Ee-l3p">
+                                <rect key="frame" x="119" y="381" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                <color key="textColor" red="0.25490196078431371" green="0.42745098039215684" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ALb-Ht-0EU" secondAttribute="trailing" id="5CW-Vv-xE3"/>
+                            <constraint firstItem="bZN-Ee-l3p" firstAttribute="centerX" secondItem="cgw-TE-Vuq" secondAttribute="centerX" id="QRZ-p9-FGZ"/>
+                            <constraint firstItem="gA2-xc-ehP" firstAttribute="top" secondItem="qkz-zd-iFG" secondAttribute="bottom" constant="8" id="SkA-fS-gsj"/>
                             <constraint firstItem="ALb-Ht-0EU" firstAttribute="leading" secondItem="cgw-TE-Vuq" secondAttribute="leading" id="aUI-sM-wGd"/>
-                            <constraint firstItem="ut2-EO-94x" firstAttribute="top" secondItem="ALb-Ht-0EU" secondAttribute="bottom" constant="27" id="dcd-vl-MWN"/>
+                            <constraint firstItem="bZN-Ee-l3p" firstAttribute="top" secondItem="gA2-xc-ehP" secondAttribute="bottom" constant="8" id="kUd-y4-CIu"/>
+                            <constraint firstItem="qkz-zd-iFG" firstAttribute="leading" secondItem="cgw-TE-Vuq" secondAttribute="leadingMargin" constant="8" id="rpI-Uc-BAM"/>
                             <constraint firstItem="ALb-Ht-0EU" firstAttribute="top" secondItem="bEm-Ks-A07" secondAttribute="bottom" id="tQP-d7-49T"/>
-                            <constraint firstItem="ut2-EO-94x" firstAttribute="centerX" secondItem="ALb-Ht-0EU" secondAttribute="centerX" id="uyB-fN-nTu"/>
+                            <constraint firstItem="qkz-zd-iFG" firstAttribute="top" secondItem="ALb-Ht-0EU" secondAttribute="bottom" constant="40" id="w92-CK-H5V"/>
+                            <constraint firstItem="qkz-zd-iFG" firstAttribute="trailing" secondItem="cgw-TE-Vuq" secondAttribute="trailingMargin" constant="8" id="x0v-2V-abL"/>
+                            <constraint firstItem="gA2-xc-ehP" firstAttribute="centerX" secondItem="cgw-TE-Vuq" secondAttribute="centerX" id="ynt-FA-U9i"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8o-eV-FU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="984"/>
+            <point key="canvasLocation" x="658.39999999999998" y="983.65817091454278"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="wJ4-eQ-9Ec">
@@ -286,11 +302,11 @@
                         <viewControllerLayoutGuide type="bottom" id="zf9-Fb-NOA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="neL-63-pMT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="j2v" translatesAutoresizingMaskIntoConstraints="NO" id="rAG-UJ-rgx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="211"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mcv" translatesAutoresizingMaskIntoConstraints="NO" id="rAG-UJ-rgx">
+                                <rect key="frame" x="0.0" y="20" width="768" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="211" id="mIY-MT-xcg"/>
                                 </constraints>
@@ -298,9 +314,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6e8-Wr-rZR">
                                 <rect key="frame" x="35" y="269" width="304" height="267"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">J2Vibes: where stars are made, is powered by Studio 31st. Enjoy the best of Afrobeat with all kind of flavour. We bring you music from celebs and raw talents from the street. You are free to listen and share all music files on this app.
+                                <string key="text">My City Vibes: where stars are made, is powered by Studio 31st. Enjoy the best of Afrobeat with all kind of flavour. We bring you music from celebs and raw talents from the street. You are free to listen and share all music files on this app.
 
-Are you looking to promote your music on the platform? Go to www.j2vibes.com to upload your music file. It will be available for all users as soon as we conclude piracy check.
+Are you looking to promote your music on the platform? Go to www.mycityvibes.net to upload your music file. It will be available for all users as soon as we conclude piracy check.
 
 This App was designed and built by 31st bridge Limited. See contact information below.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -375,10 +391,9 @@ This App was designed and built by 31st bridge Limited. See contact information 
             </objects>
             <point key="canvasLocation" x="1143.2" y="991.75412293853083"/>
         </scene>
-        <!--J2Vibes-->
+        <!--My City Vibes-->
         <scene sceneID="dlh-tE-aKS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2m1-qW-2Ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="mcategory" id="Jbu-Kq-lHc" customClass="MusicCategoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oR7-2E-hXa"/>
@@ -533,7 +548,7 @@ This App was designed and built by 31st bridge Limited. See contact information 
                         <color key="backgroundColor" red="0.1779979122" green="0.2429023683" blue="0.12995291170000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="J2Vibes" id="Y93-8G-2Ib">
+                    <navigationItem key="navigationItem" title="My City Vibes" id="Y93-8G-2Ib">
                         <barButtonItem key="backBarButtonItem" title="Category" id="1ET-P5-VQW">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -558,6 +573,7 @@ This App was designed and built by 31st bridge Limited. See contact information 
                         <segue destination="sCl-Du-nVD" kind="show" identifier="gototable" id="WYQ-8b-Ryf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2m1-qW-2Ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-87" y="-361"/>
         </scene>
@@ -584,9 +600,8 @@ This App was designed and built by 31st bridge Limited. See contact information 
         <image name="alaby" width="90" height="85"/>
         <image name="bridge" width="262" height="100"/>
         <image name="dj_mix" width="800" height="533"/>
-        <image name="j2v" width="1406" height="1125"/>
         <image name="mavin" width="800" height="600"/>
-        <image name="starBoy" width="600" height="600"/>
+        <image name="mcv" width="1406" height="1125"/>
         <image name="starBoy2" width="1300" height="866"/>
         <image name="starBoy2.jpg" width="22" height="13"/>
         <image name="ybnl" width="640" height="450"/>

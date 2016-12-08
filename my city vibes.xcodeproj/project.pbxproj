@@ -77,15 +77,15 @@
 		4258AAAB1DAEE4F700FCBED6 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		429517371DF36AA600F9D535 /* MusicCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicCategoryViewController.h; sourceTree = "<group>"; };
 		429517381DF36AA600F9D535 /* MusicCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicCategoryViewController.m; sourceTree = "<group>"; };
-		5643E14B1C0C2AEA005D1A1C /* VOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5643E14B1C0C2AEA005D1A1C /* my city vibes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my city vibes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5643E14F1C0C2AEA005D1A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5643E1511C0C2AEA005D1A1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5643E1521C0C2AEA005D1A1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5643E15A1C0C2AEA005D1A1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		5643E15D1C0C2AEA005D1A1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5643E15F1C0C2AEA005D1A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5643E1641C0C2AEA005D1A1C /* VOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5643E16F1C0C2AEA005D1A1C /* VOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5643E1641C0C2AEA005D1A1C /* my city vibesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my city vibesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5643E16F1C0C2AEA005D1A1C /* my city vibesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my city vibesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5643E1961C0C3105005D1A1C /* MusicHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MusicHandler.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5643E1971C0C3105005D1A1C /* MusicHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MusicHandler.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5643E19B1C0C3182005D1A1C /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -111,7 +111,7 @@
 		5643E1C01C0C3985005D1A1C /* MusicEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MusicEntity.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5643E1C11C0C3985005D1A1C /* MusicListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MusicListEntity.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5643E1C21C0C3985005D1A1C /* MusicListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MusicListEntity.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		5643E1DA1C0C3BB7005D1A1C /* VOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VOS-Prefix.pch"; sourceTree = "<group>"; };
+		5643E1DA1C0C3BB7005D1A1C /* my city vibes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "my city vibes-Prefix.pch"; sourceTree = "<group>"; };
 		5643E1DB1C0C3E8B005D1A1C /* BaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BaseHelper.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5643E1DC1C0C3E8B005D1A1C /* BaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BaseHelper.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5643E1DE1C0C3FF5005D1A1C /* MusicListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListCell.h; sourceTree = "<group>"; };
@@ -182,9 +182,9 @@
 		5643E14C1C0C2AEA005D1A1C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5643E14B1C0C2AEA005D1A1C /* VOS.app */,
-				5643E1641C0C2AEA005D1A1C /* VOSTests.xctest */,
-				5643E16F1C0C2AEA005D1A1C /* VOSTests.xctest */,
+				5643E14B1C0C2AEA005D1A1C /* my city vibes.app */,
+				5643E1641C0C2AEA005D1A1C /* my city vibesTests.xctest */,
+				5643E16F1C0C2AEA005D1A1C /* my city vibesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 				4258AA961DA9991200FCBED6 /* MenuViewController.m */,
 				5643E15F1C0C2AEA005D1A1C /* Info.plist */,
 				5643E14F1C0C2AEA005D1A1C /* main.m */,
-				5643E1DA1C0C3BB7005D1A1C /* VOS-Prefix.pch */,
+				5643E1DA1C0C3BB7005D1A1C /* my city vibes-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -409,9 +409,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5643E14A1C0C2AEA005D1A1C /* VOS */ = {
+		5643E14A1C0C2AEA005D1A1C /* my city vibes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5643E1781C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "VOS" */;
+			buildConfigurationList = 5643E1781C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "my city vibes" */;
 			buildPhases = (
 				75BFB1BF5338C65C89440478 /* [CP] Check Pods Manifest.lock */,
 				5643E1471C0C2AEA005D1A1C /* Sources */,
@@ -424,14 +424,14 @@
 			);
 			dependencies = (
 			);
-			name = VOS;
+			name = "my city vibes";
 			productName = Enesco;
-			productReference = 5643E14B1C0C2AEA005D1A1C /* VOS.app */;
+			productReference = 5643E14B1C0C2AEA005D1A1C /* my city vibes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5643E1631C0C2AEA005D1A1C /* VOSTests */ = {
+		5643E1631C0C2AEA005D1A1C /* my city vibesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5643E17B1C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "VOSTests" */;
+			buildConfigurationList = 5643E17B1C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "my city vibesTests" */;
 			buildPhases = (
 				5643E1601C0C2AEA005D1A1C /* Sources */,
 				5643E1611C0C2AEA005D1A1C /* Frameworks */,
@@ -442,14 +442,14 @@
 			dependencies = (
 				5643E1661C0C2AEA005D1A1C /* PBXTargetDependency */,
 			);
-			name = VOSTests;
+			name = "my city vibesTests";
 			productName = EnescoTests;
-			productReference = 5643E1641C0C2AEA005D1A1C /* VOSTests.xctest */;
+			productReference = 5643E1641C0C2AEA005D1A1C /* my city vibesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5643E16E1C0C2AEA005D1A1C /* VOSUITests */ = {
+		5643E16E1C0C2AEA005D1A1C /* my city vibesUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5643E17E1C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "VOSUITests" */;
+			buildConfigurationList = 5643E17E1C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "my city vibesUITests" */;
 			buildPhases = (
 				5643E16B1C0C2AEA005D1A1C /* Sources */,
 				5643E16C1C0C2AEA005D1A1C /* Frameworks */,
@@ -460,9 +460,9 @@
 			dependencies = (
 				5643E1711C0C2AEA005D1A1C /* PBXTargetDependency */,
 			);
-			name = VOSUITests;
+			name = "my city vibesUITests";
 			productName = EnescoUITests;
-			productReference = 5643E16F1C0C2AEA005D1A1C /* VOSTests.xctest */;
+			productReference = 5643E16F1C0C2AEA005D1A1C /* my city vibesTests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -476,7 +476,8 @@
 				TargetAttributes = {
 					5643E14A1C0C2AEA005D1A1C = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 3PU2FX2MA5;
+						DevelopmentTeam = KZH2XJF83L;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -493,7 +494,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5643E1461C0C2AEA005D1A1C /* Build configuration list for PBXProject "VOS" */;
+			buildConfigurationList = 5643E1461C0C2AEA005D1A1C /* Build configuration list for PBXProject "my city vibes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -506,9 +507,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5643E14A1C0C2AEA005D1A1C /* VOS */,
-				5643E1631C0C2AEA005D1A1C /* VOSTests */,
-				5643E16E1C0C2AEA005D1A1C /* VOSUITests */,
+				5643E14A1C0C2AEA005D1A1C /* my city vibes */,
+				5643E1631C0C2AEA005D1A1C /* my city vibesTests */,
+				5643E16E1C0C2AEA005D1A1C /* my city vibesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -640,12 +641,12 @@
 /* Begin PBXTargetDependency section */
 		5643E1661C0C2AEA005D1A1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5643E14A1C0C2AEA005D1A1C /* VOS */;
+			target = 5643E14A1C0C2AEA005D1A1C /* my city vibes */;
 			targetProxy = 5643E1651C0C2AEA005D1A1C /* PBXContainerItemProxy */;
 		};
 		5643E1711C0C2AEA005D1A1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5643E14A1C0C2AEA005D1A1C /* VOS */;
+			target = 5643E14A1C0C2AEA005D1A1C /* my city vibes */;
 			targetProxy = 5643E1701C0C2AEA005D1A1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -751,15 +752,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7D8755640D3B2B7EDFE5737 /* Pods-VOS.debug.xcconfig */;
 			buildSettings = {
+				ALTERNATE_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PU2FX2MA5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KZH2XJF83L;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VOS/Thirdparty",
 				);
-				GCC_PREFIX_HEADER = "VOS/VOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "VOS/my city vibes-Prefix.pch";
 				INFOPLIST_FILE = VOS/Info.plist;
+				INSTALL_GROUP = "";
+				INSTALL_OWNER = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.31stBridge.vos;
@@ -771,15 +776,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE7E6842F323E16A964D93CC /* Pods-VOS.release.xcconfig */;
 			buildSettings = {
+				ALTERNATE_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PU2FX2MA5;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KZH2XJF83L;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VOS/Thirdparty",
 				);
-				GCC_PREFIX_HEADER = "VOS/VOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "VOS/my city vibes-Prefix.pch";
 				INFOPLIST_FILE = VOS/Info.plist;
+				INSTALL_GROUP = "";
+				INSTALL_OWNER = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.31stBridge.vos;
@@ -794,8 +804,8 @@
 				INFOPLIST_FILE = EnescoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.est-group.EnescoTests";
-				PRODUCT_NAME = VOSTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VOS.app/VOS";
+				PRODUCT_NAME = "my city vibesTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/my city vibes.app/my city vibes";
 			};
 			name = Debug;
 		};
@@ -806,8 +816,8 @@
 				INFOPLIST_FILE = EnescoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.est-group.EnescoTests";
-				PRODUCT_NAME = VOSTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VOS.app/VOS";
+				PRODUCT_NAME = "my city vibesTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/my city vibes.app/my city vibes";
 			};
 			name = Release;
 		};
@@ -817,7 +827,7 @@
 				INFOPLIST_FILE = EnescoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.est-group.EnescoTests";
-				PRODUCT_NAME = VOSTests;
+				PRODUCT_NAME = "my city vibesTests";
 				TEST_TARGET_NAME = Enesco;
 				USES_XCTRUNNER = YES;
 			};
@@ -829,7 +839,7 @@
 				INFOPLIST_FILE = EnescoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.est-group.EnescoTests";
-				PRODUCT_NAME = VOSTests;
+				PRODUCT_NAME = "my city vibesTests";
 				TEST_TARGET_NAME = Enesco;
 				USES_XCTRUNNER = YES;
 			};
@@ -838,7 +848,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5643E1461C0C2AEA005D1A1C /* Build configuration list for PBXProject "VOS" */ = {
+		5643E1461C0C2AEA005D1A1C /* Build configuration list for PBXProject "my city vibes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5643E1761C0C2AEA005D1A1C /* Debug */,
@@ -847,7 +857,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5643E1781C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "VOS" */ = {
+		5643E1781C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "my city vibes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5643E1791C0C2AEA005D1A1C /* Debug */,
@@ -856,7 +866,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5643E17B1C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "VOSTests" */ = {
+		5643E17B1C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "my city vibesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5643E17C1C0C2AEA005D1A1C /* Debug */,
@@ -865,7 +875,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5643E17E1C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "VOSUITests" */ = {
+		5643E17E1C0C2AEA005D1A1C /* Build configuration list for PBXNativeTarget "my city vibesUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5643E17F1C0C2AEA005D1A1C /* Debug */,
