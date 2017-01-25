@@ -1,11 +1,3 @@
-//
-//  AboutViewController.m
-//  Enesco
-//
-//  Created by Abbey Ola on 12/10/2016.
-//  Copyright © 2016 aufree. All rights reserved.
-//
-
 #import "AboutViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>

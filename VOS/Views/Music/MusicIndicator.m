@@ -1,11 +1,3 @@
-//
-//  MusicIndicator.m
-//  Ting
-//
-//  Created by Aufree on 11/18/15.
-//  Copyright © 2015 Ting. All rights reserved.
-//
-
 #import "MusicIndicator.h"
 #import "UIConstant.h"
 

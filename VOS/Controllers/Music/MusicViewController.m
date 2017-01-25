@@ -1,11 +1,4 @@
-//
-//  MusicViewController.m
-//  Enesco
-//
-//  Created by Aufree on 11/30/15.
-//  Copyright © 2015 The EST Group. All rights reserved.
-//
-
+#import "MusicListViewController.h"
 #import "MusicViewController.h"
 #import "MusicSlider.h"
 #import "MusicHandler.h"
@@ -25,6 +18,8 @@ static void *kDurationKVOKey = &kDurationKVOKey;
 static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
 @interface MusicViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *producerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *releasedate;
 
 @property (weak, nonatomic) IBOutlet UIButton *dismissbutton;
 @property (weak, nonatomic) IBOutlet UIImageView *volumeUp;
@@ -63,7 +58,8 @@ FBSDKShareButton *fbsharebutton;
 FBSDKLikeControl *likebutton;
 @implementation MusicViewController
 
-+ (instancetype)sharedInstance {
++ (instancetype)sharedInstance
+{
     static MusicViewController *_sharedMusicVC = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -80,39 +76,23 @@ FBSDKLikeControl *likebutton;
     [super viewDidLoad];
     [self adapterIphone4];
     [self setupView];
-    [NSTimer scheduledTimerWithTimeInterval:60.0f
-                                     target:self selector:@selector(addtoMyselection:) userInfo:nil repeats:YES];
-    if (downloadinprogress) {
-        NSLog(@"yes in progress");
-    }
-    else{
-        NSLog(@"no no");
-    }
-    _musicEntitiesSelection = [[NSMutableArray alloc] init];
-//    if (!_musicEntitiesSelection) _musicEntitiesSelection = [[NSMutableArray alloc] init];
-//    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"mySelection"];
-//    _musicEntitiesSelection = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    //NSLog(@"%@", _musicEntitiesSelection);
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    _musicEntitiesSelection = [defaults objectForKey:@"mySelection"];
-    
+
+    if (!_musicEntitiesSelection) _musicEntitiesSelection = [[NSMutableArray alloc] init];
     _musicDurationTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSliderValue:) userInfo:nil repeats:YES];
     _currentIndex = 0;
     _musicIndicator = [MusicIndicator sharedInstance];
     _originArray = @[].mutableCopy;
     _randomArray = [[NSMutableArray alloc] initWithCapacity:0];
     [self addPanRecognizer];
-    NSLog(@"viewdidload");
 }
 
--(void)viewDidAppear:(BOOL)animated{
+-(void)viewDidAppear:(BOOL)animated
+{
     [self setupBackgroudImage];
-    NSLog(@"viewdidAppear");
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"viewwillappear");
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
     
@@ -175,6 +155,8 @@ FBSDKLikeControl *likebutton;
     _musicEntity = entity;
     _musicNameLabel.text = _musicEntity.name;
     _singerLabel.text = [NSString stringWithFormat:@"Artist: %@", _musicEntity.artistName];
+    _producerLabel.text = [NSString stringWithFormat:@"Produced by: %@", _musicEntity.producer];
+    _releasedate.text = [NSString stringWithFormat:@"Year: %@", _musicEntity.year];
     _musicTitleLabel.text = _musicTitle;
     likebutton.objectID = _musicEntity.musicUrl;
     sharecontent.contentURL = [NSURL URLWithString:_musicEntity.musicUrl];
@@ -211,7 +193,6 @@ FBSDKLikeControl *likebutton;
 
 - (void)setupRadioMusicIfNeeded
 {
-    //_musicMenuButton.hidden = NO;
     [self updateMusicCycleButton];
     [self checkCurrentIndex];
 }
@@ -235,7 +216,6 @@ FBSDKLikeControl *likebutton;
     
     NSString *imageWidth = [NSString stringWithFormat:@"%.f", (SCREEN_WIDTH - 70) * 2];
     NSURL *imageUrl = [BaseHelper qiniuImageCenter:_musicEntity.cover withWidth:imageWidth withHeight:imageWidth];
-    NSLog(@"image cover: %@", imageUrl);
     [_backgroudImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"music_placeholder"]];
     [_albumImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"music_placeholder"]];
     
@@ -286,8 +266,6 @@ FBSDKLikeControl *likebutton;
     [_favoriteButton startDuangAnimation];
     if ([self hasBeenFavoriteMusic])
     {
-//        [self unfavoriteMusic];
- //       [self deletefilefromSelection:_musicEntity.fileName];
     }
     else
     {
@@ -444,7 +422,8 @@ FBSDKLikeControl *likebutton;
 
 # pragma mark - Handle Music Slider
 
-- (void)updateSliderValue:(id)timer {
+- (void)updateSliderValue:(id)timer
+{
     if (!_streamer) {
         return;
     }
@@ -493,61 +472,25 @@ FBSDKLikeControl *likebutton;
     [self setupMusicViewWithMusicEntity:_musicEntities[_currentIndex]];
     [self loadPreviousAndNextMusicImage];
     [MusicHandler configNowPlayingInfoCenter];
-    
     Track *track = [[Track alloc] init];
-   // NSLog(@"%@", _musicTitle);
     if ([_musicTitle isEqualToString:@"my selection"])
     {
-        ///
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString  *documentsDirectory = [paths objectAtIndex:0];
         filePath = [NSString stringWithFormat:@"%@/%@.mp3", documentsDirectory, _musicEntity.fileName];
         NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
-        
-        ///
-//        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:_musicEntity.fileName ofType: @"mp3"];
-//        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath];
         track.audioFileURL = fileURL;
     }
-    else if ([_musicTitle isEqualToString:@"as e dey hot"])
+    else
     {
         [track setAudioFileURL:[NSURL URLWithString:_musicEntity.musicUrl]];
     }
     
-    //
-    
-//    NSString *stringURL = _musicEntity.musicUrl;
-//    NSLog(@"%@", _musicEntity.musicUrl);
-//    NSURL  *url = [NSURL URLWithString:stringURL];
-//    NSData *urlData = [NSData dataWithContentsOfURL:url];
-//    
-//    
-//    //
-//    if ( urlData )
-//    {
-//        NSArray       *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//        NSString  *documentsDirectory = [paths objectAtIndex:0];
-//        
-//        filePath = [NSString stringWithFormat:@"%@/%@.mp3", documentsDirectory, _musicEntity.fileName];
-//        [urlData writeToFile:filePath atomically:YES];
-//        NSLog(@"%@",filePath);
-//    }
-//    
-//    //
-//    
-//    
-//    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:_musicEntity.fileName ofType: @"mp3"];
-//    NSLog(@"%@", soundFilePath);
-//    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
-    
-//    track.audioFileURL = [NSURL URLWithString:_musicEntity.musicUrl];
-    
-    //[track setAudioFileURL:[NSURL URLWithString:_musicEntity.musicUrl]];
-    //track.audioFileURL = fileURL;
-    
-    @try {
+    @try
+    {
         [self removeStreamerObserver];
-    } @catch(id anException){
+    }
+    @catch(id anException){
     }
     
     _streamer = nil;
@@ -569,23 +512,31 @@ FBSDKLikeControl *likebutton;
     [_streamer addObserver:self forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if (context == kStatusKVOKey) {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == kStatusKVOKey)
+    {
         [self performSelector:@selector(updateStatus)
                      onThread:[NSThread mainThread]
                    withObject:nil
                 waitUntilDone:NO];
-    } else if (context == kDurationKVOKey) {
+    }
+    else if (context == kDurationKVOKey)
+    {
         [self performSelector:@selector(updateSliderValue:)
                      onThread:[NSThread mainThread]
                    withObject:nil
                 waitUntilDone:NO];
-    } else if (context == kBufferingRatioKVOKey) {
+    }
+    else if (context == kBufferingRatioKVOKey)
+    {
         [self performSelector:@selector(updateBufferingStatus)
                      onThread:[NSThread mainThread]
                    withObject:nil
                 waitUntilDone:NO];
-    } else {
+    }
+    else
+    {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
@@ -680,69 +631,21 @@ FBSDKLikeControl *likebutton;
     {
         _musicEntities = nil;
     }
-    
-    return _musicEntities[_currentIndex];
+    if (_musicEntities.count == _currentIndex)
+    {
+        return nil;
+    }
+    else return _musicEntities[_currentIndex];
 }
 
 -(void)addtoMyselection:(NSTimer *)timer
 {
     if (downloadinprogress)
     {
-        NSLog(@"download in progress");
         return;
     }
     else
-        [self downloadmusicfiles];
-}
-
--(void)downloadmusicfiles
-{
-    if (!_downloadqueue || !_downloadqueue.count){
-        NSLog(@"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
-        return;
-    }
-
-    for (MusicEntity *musicEntityinqueue in _downloadqueue)
-    {
-        __weak __typeof(self) weakSelf = self;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSLog(@"%@", musicEntityinqueue);
-            NSLog(@"before %@", _downloadqueue);
-            [_downloadqueue removeObject:musicEntityinqueue];
-            NSLog(@"after %@", _downloadqueue);
-            downloadinprogress = true;
-            NSLog(@"Work Dispatched");
-            NSString *stringURL = musicEntityinqueue.musicUrl;
-            NSURL  *url = [NSURL URLWithString:stringURL];
-            NSData *urlData = [NSData dataWithContentsOfURL:url];
-            if ( urlData )
-            {
-                NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-                NSString *documentsDirectory = [paths objectAtIndex:0];
-                filePath = [NSString stringWithFormat:@"%@/%@.mp3", documentsDirectory, musicEntityinqueue.fileName];
-                NSLog(@"%@", filePath);
-                [urlData writeToFile:filePath atomically:YES];
-            }
-            __typeof(weakSelf) strongSelf = weakSelf;
-            if (strongSelf)
-            {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSString *jobdone = [NSString stringWithFormat:@"%@ added to offline selection", musicEntityinqueue.name];
-                    [self showMiddleHint:jobdone];
-                    if (!_musicEntitiesSelection) _musicEntitiesSelection = [[NSMutableArray alloc] init];
-                    //NSLog(@"////////////%@", _musicEntitiesSelection);
-                    NSLog(@"%@", musicEntityinqueue);
-                    [_musicEntitiesSelection insertObject:musicEntityinqueue atIndex:0];
-                    //[_musicEntitiesSelection addObject:musicEntityinqueue];
-                    NSLog(@":::::::::::::::::%@", _musicEntitiesSelection);
-                    NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:_musicEntitiesSelection];
-                    [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:@"mySelection"];
-                    [[NSUserDefaults standardUserDefaults] synchronize];
-                });
-            }
-            downloadinprogress = false;
-        });
-    }
+        [self downloadmusicfiles: [_downloadqueue firstObject]];
 }
 
 -(void)offlineprocess
@@ -750,35 +653,69 @@ FBSDKLikeControl *likebutton;
     [self showMiddleHint:@"track will be added to offline selection"];
     if (!_downloadqueue) _downloadqueue = [[NSMutableArray alloc] init];
     [_downloadqueue addObject:_musicEntity];
-    //NSLog(@"%@", _downloadqueue);
+    [self downloadmanager];
 }
 
--(void)deletefilefromSelection:(NSString *)filename
+-(void)downloadmanager
 {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *filewithsufix = [NSString stringWithFormat:@"%@.mp3", filename];
-    NSString *filePath = [documentsPath stringByAppendingPathComponent:filewithsufix];
-    NSError *error;
-    BOOL success = [fileManager removeItemAtPath:filePath error:&error];
-    if (success)
-    {
-        _deletethis = _musicEntities;
-        NSLog(@"delete this %@", _deletethis);
-        
-        [self checkNextIndexValue];
-        [self setupStreamer];
-        [_musicEntitiesSelection removeObject:_deletethis];
-        NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:_musicEntitiesSelection];
-        [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:@"mySelection"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [self showMiddleHint:@"track deleted"];
+    if (downloadinprogress || !_downloadqueue || !_downloadqueue.count) {
+        return;
     }
     else
     {
-        NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
+        [self downloadmusicfiles: [_downloadqueue firstObject]];
     }
 }
+
+-(void)downloadmusicfiles: (MusicEntity *) trackToDownload
+{
+    __weak __typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        downloadinprogress = true;
+        [_downloadqueue removeObject:trackToDownload];
+        downloadinprogress = true;
+        NSString *stringURL = trackToDownload.musicUrl;
+        NSURL  *url = [NSURL URLWithString:stringURL];
+        NSData *urlData = [NSData dataWithContentsOfURL:url];
+        if ( urlData )
+        {
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentsDirectory = [paths objectAtIndex:0];
+            filePath = [NSString stringWithFormat:@"%@/%@.mp3", documentsDirectory, trackToDownload.fileName];
+            [urlData writeToFile:filePath atomically:YES];
+        }
+        __typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *jobdone = [NSString stringWithFormat:@"%@ added to offline selection", trackToDownload.name];
+                [self showMiddleHint:jobdone];
+                NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"mySelection"];
+                if (data)
+                {
+                    _musicEntitiesSelection = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+                }
+                [_musicEntitiesSelection addObject:trackToDownload];
+                NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:_musicEntitiesSelection];
+                [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:@"mySelection"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            });
+        }
+        [self downloadcompleted];
+    });
+}
+
+- (void) downloadcompleted
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"offlineListUpdated" object:self];
+    
+    MusicListViewController * musiclist = [[MusicListViewController alloc]init];
+    [musiclist.tableView reloadData];
+    
+    downloadinprogress = false;
+    [self downloadmanager];
+}
+
 - (IBAction)volumeControl:(UISlider *)slider
 {
     _streamer.volume = _volumeControl.value;
@@ -850,12 +787,9 @@ FBSDKLikeControl *likebutton;
     }
     else
     {
-        //_musicSlider.center = CGPointMake(20, 240);
         CGFloat xPosition = CGRectGetWidth(superView.frame) - CGRectGetWidth(frame);
-        //frame.origin = CGPointMake(ceil(xPosition + 80), 90.0);
         CGRect sliderFrame = CGRectMake(0, 103, 50, 270);
         _volumeControl.frame = CGRectMake (ceil(xPosition + 70), 103, 50, 270);
-        //_volumeControl.frame = frame;
         _musicSlider.frame = sliderFrame;
     }
     fbsharebutton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;

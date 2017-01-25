@@ -17,7 +17,9 @@
              @"cover" : @"pic",
              @"artistName" : @"artist",
              @"musicUrl" : @"music_url",
-             @"fileName" : @"file_name"
+             @"fileName" : @"file_name",
+             @"producer" : @"producer",
+             @"year" : @"year"
              };
 }
 

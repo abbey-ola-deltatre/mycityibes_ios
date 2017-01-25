@@ -9,6 +9,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.menuPreferredStatusBarStyle = UIStatusBarStyleLightContent;
     self.contentViewShadowColor = [UIColor blackColor];
     self.contentViewShadowOffset = CGSizeMake(0, 0);
@@ -18,8 +19,6 @@
     
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuVC"];
-    self.rightMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuVC"];
-    //self.backgroundImage = [UIImage imageNamed:@"Stars"];
     self.delegate = self;
 }
 
@@ -28,7 +27,6 @@
 
 - (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
 {
-    NSLog(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
     MenuViewController* menuVc = [[MenuViewController alloc]init];
     [menuVc getUserFBName];
     menuVc = nil;
@@ -36,17 +34,14 @@
 
 - (void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
 {
-    NSLog(@"didShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController
 {
-    NSLog(@"willHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController
 {
-    NSLog(@"didHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 
 @end

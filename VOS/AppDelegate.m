@@ -23,8 +23,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-    MusicViewController *musicVC = [MusicViewController sharedInstance];
-    musicVC.musicTitle = @"as e dey hot";
+//    MusicViewController *musicVC = [MusicViewController sharedInstance];
+//    musicVC.musicTitle = @"as e dey hot";
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -110,11 +110,9 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    NSLog(@"here ghhjh");
     MusicViewController *musicVC = [MusicViewController sharedInstance];
     NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:musicVC.musicEntitiesSelection];
     [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:@"mySelection"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    NSLog(@"done!");
 }
 @end

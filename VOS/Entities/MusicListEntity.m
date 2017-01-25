@@ -16,6 +16,8 @@
              @"name" : @"name",
              @"musicDescription" : @"description",
              @"cover" : @"cover",
+             @"producer" : @"producer",
+             @"year" : @"year",
              @"musicCount" : @"music_count",
              @"musicLength" : @"music_length",
              @"favoriteCount" : @"favorite_count",

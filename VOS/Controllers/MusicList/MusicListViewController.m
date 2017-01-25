@@ -1,11 +1,3 @@
-//
-//  MusicListViewController.m
-//  Enesco
-//
-//  Created by Aufree on 11/30/15.
-//  Copyright © 2015 The EST Group. All rights reserved.
-//
-
 #import "MusicListViewController.h"
 #import "MusicViewController.h"
 #import "MusicListCell.h"
@@ -22,6 +14,8 @@
 @end
 int indexWatcher;
 BOOL showdeletebotton;
+BOOL containdata;
+//UIRefreshControl *refreshController;
 @implementation MusicListViewController
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
@@ -46,11 +40,13 @@ BOOL showdeletebotton;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     _searchBar.backgroundColor = [UIColor redColor];
+    
      MusicViewController *musicVC = [MusicViewController sharedInstance];
-    if (!musicVC.musicEntitiesSelection) musicVC.musicEntitiesSelection = [[NSMutableArray alloc] init];
-    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"mySelection"];
-    musicVC.musicEntitiesSelection = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    [self getofflinelist];
+    [self enablepulltorefresh];
     
     [ self.navigationController.navigationBar setBarTintColor :[ UIColor colorWithRed:0.0 green:0.5 blue:0.2 alpha:1]];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -59,6 +55,26 @@ BOOL showdeletebotton;
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self headerRefreshing];
+}
+
+-(void)getofflinelist
+{
+    if (!_musicEntitiesSelection) _musicEntitiesSelection = [[NSMutableArray alloc] init];
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"mySelection"];
+    if (data)
+    {
+        _musicEntitiesSelection = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    }
+}
+
+-(void)enablepulltorefresh
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.2 alpha:1];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(pullToRefresh:)
+                  forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -84,9 +100,6 @@ BOOL showdeletebotton;
     {
         indicator.state = NAKPlaybackIndicatorViewStatePlaying;
     }
-    UIImage *leftMenu = [UIImage imageNamed:@"menu"];
-    leftMenu = [leftMenu imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.navigationItem.leftBarButtonItem =  [[UIBarButtonItem alloc] initWithImage:leftMenu style:UIBarButtonItemStylePlain target:self action:@selector(presentLeftMenuViewController:)];
     
     [self.navigationController.navigationBar addSubview:indicator];
     
@@ -114,25 +127,69 @@ BOOL showdeletebotton;
     MusicViewController *musicVC = [MusicViewController sharedInstance];
     if ([musicVC.musicTitle isEqualToString:@"my selection"])
     {
-        _musicEntities = musicVC.musicEntitiesSelection;
+        _musicEntities = _musicEntitiesSelection;
         showdeletebotton = true;
         [self.tableView reloadData];
+        if (_musicEntitiesSelection.count != 0)
+        {
+            self.tableView.backgroundView = nil;
+        }
+        else
+        {
+            [self tableviewbackgroundtext:@"Its boring here, you have not added any track to your selection"];
+        }
+        
     }
     else if ([musicVC.musicTitle isEqualToString:@"as e dey hot"])
     {
         showdeletebotton = false;
-        [self loadjsondata:@"http://9jacarwash.com/music_list.json"];
+        [self loadjsondata:@"http://9jacarwash.com/trending.json"];
+        [self checkforemptytable];
     }
-    else if ([musicVC.musicTitle isEqualToString:@"top rated"])
+    else if ([musicVC.musicTitle isEqualToString:@"dj mix"])
     {
         showdeletebotton = false;
-        [self loadjsondata:@"http://9jacarwash.com/toprated.json"];
+        [self loadjsondata:@"http://9jacarwash.com/dj_mix.json"];
+        [self checkforemptytable];
     }
-    else if ([musicVC.musicTitle isEqualToString:@"our pick"])
+    else if ([musicVC.musicTitle isEqualToString:@"next rated"])
     {
         showdeletebotton = false;
-        [self loadjsondata:@"http://9jacarwash.com/ourpick.json"];
+        [self loadjsondata:@"http://9jacarwash.com/newbies.json"];
+        [self checkforemptytable];
     }
+    else if ([musicVC.musicTitle isEqualToString:@"ybnl nation"])
+    {
+        showdeletebotton = false;
+        [self loadjsondata:@"http://9jacarwash.com/ybnl.json"];
+        [self checkforemptytable];
+    }
+    else if ([musicVC.musicTitle isEqualToString:@"maven"])
+    {
+        showdeletebotton = false;
+        [self loadjsondata:@"http://9jacarwash.com/maven.json"];
+        [self checkforemptytable];
+    }
+    else if ([musicVC.musicTitle isEqualToString:@"old school"])
+    {
+        showdeletebotton = false;
+        [self loadjsondata:@"http://9jacarwash.com/old_school.json"];
+        [self checkforemptytable];
+    }
+    else if ([musicVC.musicTitle isEqualToString:@"gospel"])
+    {
+        showdeletebotton = false;
+        [self loadjsondata:@"http://9jacarwash.com/gospel.json"];
+        [self checkforemptytable];
+    }
+    
+    [self.tableView reloadData];
+}
+
+-(void)pullToRefresh : (id)sender
+{
+    [self headerRefreshing];
+    [self.refreshControl endRefreshing];
 }
 
 -(void)loadjsondata:(NSString *)jsonurl
@@ -146,16 +203,14 @@ BOOL showdeletebotton;
      {
          if (data.length > 0 && connectionError == nil)
          {
-             
              NSDictionary *musicsDict = [NSJSONSerialization JSONObjectWithData:data
                                                                         options:0
                                                                           error:NULL];
              _musicEntities = [MusicEntity arrayOfEntitiesFromArray:musicsDict[@"data"]].mutableCopy;
              _searchResult = [NSMutableArray arrayWithCapacity:[_musicEntities count]];
+             self.tableView.backgroundView = nil;
              [self.tableView reloadData];
          }
-         else
-             NSLog(@"blabalabalabalab");
      }];
 }
 
@@ -183,7 +238,7 @@ BOOL showdeletebotton;
         MusicViewController *musicVC = [MusicViewController sharedInstance];
         musicVC.musicTitle = self.navigationItem.title;
         if (indexWatcher == 1) {
-            musicVC.musicEntities = [_searchResult mutableCopy];//_musicEntities;
+            musicVC.musicEntities = [_searchResult mutableCopy];
         }
         else
         {
@@ -257,6 +312,44 @@ BOOL showdeletebotton;
     }
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (_musicEntities.count != 0)
+    {
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        return 1;
+    }
+    else if (_musicEntities.count == 0)
+    {
+        MusicViewController *musicVC = [MusicViewController sharedInstance];
+        
+        if ([musicVC.musicTitle isEqualToString:@"my selection"])
+        {
+            [self tableviewbackgroundtext:@"Its boring here, you have not added any track to your selection, go heart some music and they will be available to you offline"];
+        }
+        else
+        {
+            [self tableviewbackgroundtext:@"This content is empty, please try again later"];
+        }
+    }
+    return 0;
+}
+
+-(void)tableviewbackgroundtext: (NSString*)text
+{
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    messageLabel.text = text;
+    messageLabel.textColor = [UIColor blackColor];
+    messageLabel.numberOfLines = 0;
+    messageLabel.textAlignment = NSTextAlignmentCenter;
+    messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+    messageLabel.textColor = [UIColor whiteColor];
+    [messageLabel sizeToFit];
+    self.tableView.backgroundView = messageLabel;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *musicListCell = @"musicListCell";
@@ -273,8 +366,8 @@ BOOL showdeletebotton;
     }
     else
     {
-        MusicViewController *musicVC = [MusicViewController sharedInstance];
-        for (MusicEntity *musicEntityinqueue in musicVC.musicEntitiesSelection)
+        //MusicViewController *musicVC = [MusicViewController sharedInstance];
+        for (MusicEntity *musicEntityinqueue in _musicEntitiesSelection)
         {
             if ([[_musicEntities[indexPath.row] musicUrl] isEqualToString:musicEntityinqueue.musicUrl])
             {
@@ -317,20 +410,22 @@ BOOL showdeletebotton;
     indexWatcher = 0;
 }
 
-- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
+- (void)searchDisplayControllerDidEndSearch:(UISearchController *)controller
 {
     indexWatcher = 0;
 }
 - (IBAction)deletethistrack:(id)sender
 {
-    NSLog(@"%@", [_musicEntities objectAtIndex:[sender tag]]);
-    MusicEntity *trackTodelete = [_musicEntities objectAtIndex:[sender tag]];
-    [self deletefilefromSelection:trackTodelete.fileName :[sender tag]];
-}
 
--(void)deletefilefromSelection:(NSString *)filename :(NSInteger)index
+    MusicEntity *trackTodelete = [_musicEntities objectAtIndex:[sender tag]];
+    [self deletefilefromSelection:trackTodelete.fileName :(int)[sender tag]];}
+
+-(void)deletefilefromSelection:(NSString *)filename :(int)index
 {
+    [_musicEntitiesSelection removeObjectAtIndex:index];
+    //_musicEntities = _musicEntitiesSelection;
     NSFileManager *fileManager = [NSFileManager defaultManager];
+    [self savemusicentitytodisk];
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filewithsufix = [NSString stringWithFormat:@"%@.mp3", filename];
     NSString *filePath = [documentsPath stringByAppendingPathComponent:filewithsufix];
@@ -338,17 +433,31 @@ BOOL showdeletebotton;
     BOOL success = [fileManager removeItemAtPath:filePath error:&error];
     if (success)
     {
-        MusicViewController *musicVC = [MusicViewController sharedInstance];
-        [musicVC.musicEntitiesSelection removeObjectAtIndex:index];
-        NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:musicVC.musicEntitiesSelection];
-        [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:@"mySelection"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [self showMiddleHint:@"track deleted"];
-        [self.tableView reloadData];
+       [self showMiddleHint:@"track deleted"];
     }
     else
     {
         NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
+    }
+}
+
+-(void)savemusicentitytodisk
+{
+    NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:_musicEntitiesSelection];
+    [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:@"mySelection"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.tableView reloadData];
+}
+
+-(void)checkforemptytable
+{
+    if (_musicEntities)
+    {
+        self.tableView.backgroundView = nil;
+    }
+    else
+    {
+        [self tableviewbackgroundtext:@"This content is empty, please try again later"];
     }
 }
 

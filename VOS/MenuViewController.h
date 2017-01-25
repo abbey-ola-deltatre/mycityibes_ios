@@ -11,5 +11,6 @@
 
 @interface MenuViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property (strong, readwrite, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *greeting;
 -(void) getUserFBName;
 @end
